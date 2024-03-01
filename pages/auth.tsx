@@ -8,7 +8,7 @@ import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import Input from "@/components/Input";
 
 export async function getServerSideProps(context: NextPageContext) {
   const session = await getSession(context);
@@ -77,7 +77,7 @@ const Auth = () => {
                 <Input
                   id="name"
                   type="text"
-                  placeholder="Username"
+                  label="Username"
                   value={name}
                   onChange={(e: any) => setName(e.target.value)}
                 />
@@ -85,14 +85,14 @@ const Auth = () => {
               <Input
                 id="email"
                 type="email"
-                placeholder="Email address or phone number"
+                label="Email address or phone number"
                 value={email}
                 onChange={(e: any) => setEmail(e.target.value)}
               />
               <Input
                 type="password"
                 id="password"
-                placeholder="Password"
+                label="Password"
                 value={password}
                 onChange={(e: any) => setPassword(e.target.value)}
               />
